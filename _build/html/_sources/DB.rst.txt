@@ -183,3 +183,13 @@ Tabla workers
 +---+--------------------+-----------------+--------------------------------------+----------+
 |   | worker_position    | VARCHAR(15)     | Cargo del trabajador del banco       | NOT NULL |
 +---+--------------------+-----------------+--------------------------------------+----------+
+
+Imagenes de referencia
+++++++++++++++++++++++++
+
+diagrama
+----------
+
+.. image:: ./imagenes/diagrama.jpg
+    :alt: package_info_dashboard
+    :align: center
