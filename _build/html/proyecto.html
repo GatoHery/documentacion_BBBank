@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programacion del proyecto &mdash; BBBank 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Archivos Scancode" href="scancode.html" />
+    <link rel="prev" title="Descripción del proyecto" href="descripcion%20del%20proyecto.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            BBBank
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="descripcion%20del%20proyecto.html">Descripción del proyecto</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Programacion del proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#carpeta-forms">carpeta forms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#account-cs">Account.cs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accountdetails-cs">AccountDetails.cs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deposit-money-cs">Deposit_money.cs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#formcarinsurancerequest-cs">FormCarInsuranceRequest.cs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#login-cs">Login.cs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#menu-cs">Menu.cs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#menuinsurancerequests-cs">MenuInsuranceRequests.cs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#menutransfer-cs">MenuTransfer.cs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#register-cs">register.cs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remove-money-cs">remove_money.cs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vehicleinsurancerequestinfo-cs">vehicleInsuranceRequestInfo.cs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#carpeta-models">carpeta models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#carpeta-queries">carpeta queries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#carpeta-resources">carpeta Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connection-cs">connection.cs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scancode.html">Archivos Scancode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalador.html">Instalador(portable)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DB.html">Base de datos</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">BBBank</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Programacion del proyecto</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/proyecto.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="programacion-del-proyecto">
+<h1>Programacion del proyecto<a class="headerlink" href="#programacion-del-proyecto" title="Permalink to this heading"></a></h1>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>para que funcione todo, se requiere tener una base de datos activa y ser rellenada con datos</p>
+</div>
+<section id="carpeta-forms">
+<h2>carpeta forms<a class="headerlink" href="#carpeta-forms" title="Permalink to this heading"></a></h2>
+<p>dentro de esta carpeta se encuentran todos los formularios utilizados y su navegacion respectiva</p>
+<section id="account-cs">
+<h3>Account.cs<a class="headerlink" href="#account-cs" title="Permalink to this heading"></a></h3>
+<p>Este formulario deplegara un nuevo formulario con toda la informacion del usuario que buscas, se requiere su Dui y su numero de cuenta,
+una ves validado despliega en pantalla el formulario: “AccountDetails.cs”</p>
+</section>
+<section id="accountdetails-cs">
+<h3>AccountDetails.cs<a class="headerlink" href="#accountdetails-cs" title="Permalink to this heading"></a></h3>
+<p>Este formulario se activa cuando “Account.cs” completa la busqueda de cuenta, muestra en pantalla toda la informacion relevante del
+usuario</p>
+</section>
+<section id="deposit-money-cs">
+<h3>Deposit_money.cs<a class="headerlink" href="#deposit-money-cs" title="Permalink to this heading"></a></h3>
+<p>Este formulario se encarga de depositar dinero si la cuenta y el dui de la persona son correctos y pertenecen a la misma persona</p>
+</section>
+<section id="formcarinsurancerequest-cs">
+<h3>FormCarInsuranceRequest.cs<a class="headerlink" href="#formcarinsurancerequest-cs" title="Permalink to this heading"></a></h3>
+<p>Este formulario se encarga de generar una solicitud de seguro de vehiculos</p>
+</section>
+<section id="login-cs">
+<h3>Login.cs<a class="headerlink" href="#login-cs" title="Permalink to this heading"></a></h3>
+<p>Este es el formulario principal del proyecto, aqui se dividen los tipos de usuario y existen 3: “ventanilla”, “asesorseguros” y
+“Ejecusolicitud”</p>
+<p>el usuario “ventanilla” puede realizar depositos, retiros y transferencias</p>
+<p>el usuario “asesorseguros” es la persona encargada de rellenar los formularios de solicitud de seguro de vehiculos</p>
+<p>el usuario “Ejecusolicitud” es la persona encargada de aprobar o rechazar las solicitudes de seguro de vehiculos</p>
+</section>
+<section id="menu-cs">
+<h3>Menu.cs<a class="headerlink" href="#menu-cs" title="Permalink to this heading"></a></h3>
+<p>Este formulario es el menu principal del usuario “ventanilla”, aqui se puede acceder a los formularios de deposito,
+retiro, comprobar estado de cuenta, transferir fondos, registrar un nuevo cliente</p>
+</section>
+<section id="menuinsurancerequests-cs">
+<h3>MenuInsuranceRequests.cs<a class="headerlink" href="#menuinsurancerequests-cs" title="Permalink to this heading"></a></h3>
+<p>este formulario es el menu principal del usuario “Ejecusolicitud”, requerira de un Dui y un identificador de seguros para poder buscar
+toda la informacion del cliente y el vehiculo en el formulario “vehicleInsuranceRequestInfo.cs”</p>
+</section>
+<section id="menutransfer-cs">
+<h3>MenuTransfer.cs<a class="headerlink" href="#menutransfer-cs" title="Permalink to this heading"></a></h3>
+<p>este formulario se encarga de tranferir dinero de una cuenta a otra, se requiere la cuenta de quien lo envia y la cuenta
+de quien lo recibe y el monto a enviar</p>
+</section>
+<section id="register-cs">
+<h3>register.cs<a class="headerlink" href="#register-cs" title="Permalink to this heading"></a></h3>
+<p>este formulario se encarga de crear una cuenta para un cliente, es bastante intuitivo y facil de llenar</p>
+</section>
+<section id="remove-money-cs">
+<h3>remove_money.cs<a class="headerlink" href="#remove-money-cs" title="Permalink to this heading"></a></h3>
+<p>este formulario se encarga del retiro del dinero, pedira la cuenta, el dui del cliente y el monto a retirar</p>
+</section>
+<section id="vehicleinsurancerequestinfo-cs">
+<h3>vehicleInsuranceRequestInfo.cs<a class="headerlink" href="#vehicleinsurancerequestinfo-cs" title="Permalink to this heading"></a></h3>
+<p>Este formulario se activa cuando se completa la busqueda de un cliente y su vehiculo la cual se realizo antes en el formulario
+“MenuInsuranceRequests.cs”</p>
+</section>
+</section>
+<section id="carpeta-models">
+<h2>carpeta models<a class="headerlink" href="#carpeta-models" title="Permalink to this heading"></a></h2>
+<p>son clases publicas que contiene la informacion de cada uno de los objetos que se maneja, poseen metodos getters y setters, entre
+otras funciones, estos datos estan conectados con la carpeta queries</p>
+</section>
+<section id="carpeta-queries">
+<h2>carpeta queries<a class="headerlink" href="#carpeta-queries" title="Permalink to this heading"></a></h2>
+<p>son todas las llamadas a la base de datos, se encargan de realizar las consultas y retornar los datos necesarios para el funcionamiento</p>
+</section>
+<section id="carpeta-resources">
+<h2>carpeta Resources<a class="headerlink" href="#carpeta-resources" title="Permalink to this heading"></a></h2>
+<p>en esta carpeta van todas las imagenes utilizadas en el proyecto</p>
+</section>
+<section id="connection-cs">
+<h2>connection.cs<a class="headerlink" href="#connection-cs" title="Permalink to this heading"></a></h2>
+<p>este archivo que esta ubicado en la raiz del proyecto, es el encargado de conectarse con la base de datos, en las primeras lineas de
+codigo se encuentra la cadena de conexion, la cual debe ser modificada para que funcione correctamente</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="descripcion%20del%20proyecto.html" class="btn btn-neutral float-left" title="Descripción del proyecto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="scancode.html" class="btn btn-neutral float-right" title="Archivos Scancode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, BBBank developers team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

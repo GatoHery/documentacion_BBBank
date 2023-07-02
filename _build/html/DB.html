@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Base de datos &mdash; BBBank 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Instalador(portable)" href="instalador.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            BBBank
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="descripcion%20del%20proyecto.html">Descripción del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proyecto.html">Programacion del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scancode.html">Archivos Scancode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalador.html">Instalador(portable)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Base de datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tecnologia-usada">tecnologia usada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tablas-db">Tablas DB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tabla-customer">tabla customer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tabla-bank-account">Tabla bank_account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tabla-transactions">Tabla transactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tabla-insurance-customer">Tabla insurance_customer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tabla-insured-vehicle">Tabla insured_vehicle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tabla-car-insurance-request">Tabla car_insurance_request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tabla-workers">Tabla workers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">BBBank</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Base de datos</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DB.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="base-de-datos">
+<h1>Base de datos<a class="headerlink" href="#base-de-datos" title="Permalink to this heading"></a></h1>
+<section id="tecnologia-usada">
+<h2>tecnologia usada<a class="headerlink" href="#tecnologia-usada" title="Permalink to this heading"></a></h2>
+<p>PostgreSQL</p>
+<p>pgadmin4</p>
+</section>
+<section id="tablas-db">
+<h2>Tablas DB<a class="headerlink" href="#tablas-db" title="Permalink to this heading"></a></h2>
+<section id="tabla-customer">
+<h3>tabla customer<a class="headerlink" href="#tabla-customer" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>columna</p></th>
+<th class="head"><p>Tipo de dato</p></th>
+<th class="head"><p>Descripcion</p></th>
+<th class="head"><p>NULL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PK</p></td>
+<td><p>customers_id</p></td>
+<td><p>CHARACTER(9)</p></td>
+<td><p>ID del cliente de banco</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>customer_fullname</p></td>
+<td><p>VARCHAR(100)</p></td>
+<td><p>Nombre completo del cliente
+de banco</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>customer_username</p></td>
+<td><p>VARCHAR(30)</p></td>
+<td><p>Nombre de usuario del
+cliente de banco</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>customer_email</p></td>
+<td><p>VARCHAR(30)</p></td>
+<td><p>Email del cliente de banco</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>customer_phone</p></td>
+<td><p>VARCHAR(8)</p></td>
+<td><p>Número de telefono del
+cliente de banco</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>customer_password</p></td>
+<td><p>VARCHAR(30)</p></td>
+<td><p>Contraseña del cliente
+de banco</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabla-bank-account">
+<h3>Tabla bank_account<a class="headerlink" href="#tabla-bank-account" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>columna</p></th>
+<th class="head"><p>Tipo de dato</p></th>
+<th class="head"><p>Descripcion</p></th>
+<th class="head"><p>NULL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PK</p></td>
+<td><p>account_number</p></td>
+<td><p>VARCHAR(25)</p></td>
+<td><p>Número de cuenta bancaria</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>account_name</p></td>
+<td><p>VARCHAR(100)</p></td>
+<td><p>Nombre del cliente propietario
+de la cuenta bancaria</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td><p>FK</p></td>
+<td><p>customer_id</p></td>
+<td><p>VARCHAR(9)</p></td>
+<td><p>ID del cliente propietario de
+la cuenta bancaria</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>money_amount</p></td>
+<td><p>MONEY</p></td>
+<td><p>Monto monetario de la cuenta
+bancaria</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>account_type</p></td>
+<td><p>INTEGER</p></td>
+<td><p>Tipo de cuenta bancaría</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabla-transactions">
+<h3>Tabla transactions<a class="headerlink" href="#tabla-transactions" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>columna</p></th>
+<th class="head"><p>Tipo de dato</p></th>
+<th class="head"><p>Descripcion</p></th>
+<th class="head"><p>NULL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PK</p></td>
+<td><p>transaction_number</p></td>
+<td><p>SERIAL</p></td>
+<td><p>Número de identificación de
+transacción</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td><p>FK</p></td>
+<td><p>account_number</p></td>
+<td><p>VARCHAR(25)</p></td>
+<td><p>Número de cuenta a la cual se
+transfiere el monto monetario</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>transaction_amount</p></td>
+<td><p>MONEY</p></td>
+<td><p>Monto monetario a ser
+transferido</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>transaction_comment</p></td>
+<td><p>VARCHAR(140)</p></td>
+<td><p>Comentario asociado a la
+transferencia colocado por la
+persona que realizó la transferencia</p></td>
+<td><p>NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>transaction_type</p></td>
+<td><p>CHARACTER(1)</p></td>
+<td><p>Tipo de transacción bancaria</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>transaction_date</p></td>
+<td><p>DATE</p></td>
+<td><p>Fecha de la transferencia bancaria</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>transaction_hour</p></td>
+<td><p>TIME</p></td>
+<td><p>Hora en la que se realizó la
+transferencia bancaria</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabla-insurance-customer">
+<h3>Tabla insurance_customer<a class="headerlink" href="#tabla-insurance-customer" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>columna</p></th>
+<th class="head"><p>Tipo de dato</p></th>
+<th class="head"><p>Descripcion</p></th>
+<th class="head"><p>NULL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PK</p></td>
+<td><p>customer_id</p></td>
+<td><p>CHARACTER(9)</p></td>
+<td><p>ID del cliente de seguros</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>customer_fullname</p></td>
+<td><p>VARCHAR(100)</p></td>
+<td><p>Nombre del cliente de seguros</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>customer_email</p></td>
+<td><p>VARCHAR(30)</p></td>
+<td><p>Email de cliente de seguros</p></td>
+<td><p>NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>customer_phone</p></td>
+<td><p>VARCHAR(8)</p></td>
+<td><p>Número de teléfono del cliente
+de seguros</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>customer_password</p></td>
+<td><p>VARCHAR(30)</p></td>
+<td><p>Contraseña del cliente de seguros</p></td>
+<td><p>NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>customer_address</p></td>
+<td><p>VARCHAR(100)</p></td>
+<td><p>Dirección del cliente de seguros</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>customer_employment</p></td>
+<td><p>VARCHAR(25)</p></td>
+<td><p>Trabajo del cliente de seguros</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>customer_earning</p></td>
+<td><p>NUMERIC</p></td>
+<td><p>Salario mensual del cliente
+de seguros</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>has_license</p></td>
+<td><p>BOOLEAN</p></td>
+<td><p>Indica si el cliente de seguros
+cuenta con licencia de conducir</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabla-insured-vehicle">
+<h3>Tabla insured_vehicle<a class="headerlink" href="#tabla-insured-vehicle" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>columna</p></th>
+<th class="head"><p>Tipo de dato</p></th>
+<th class="head"><p>Descripcion</p></th>
+<th class="head"><p>NULL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PK</p></td>
+<td><p>vehicle_id</p></td>
+<td><p>SERIAL</p></td>
+<td><p>ID del vehículo</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>vehicle_make</p></td>
+<td><p>VARCHAR(10)</p></td>
+<td><p>Marca del vehículo</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>vehicle_model</p></td>
+<td><p>VARCHAR(10)</p></td>
+<td><p>Modelo del vehículo</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>vehicle_year</p></td>
+<td><p>VARCHAR(4)</p></td>
+<td><p>Año de fabricación</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>vehicle_plate</p></td>
+<td><p>VARCHAR(7)</p></td>
+<td><p>Placa de identificación del vehículo</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>vehicle_vin</p></td>
+<td><p>VARCHAR(17)</p></td>
+<td><p>Número de identificación del vehículo</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>vehicle_usage</p></td>
+<td><p>VARCHAR(17)</p></td>
+<td><p>Uso que se le dá al vehículo</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>car_value</p></td>
+<td><p>NUMERIC</p></td>
+<td><p>Valor del vehículo</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td><p>FK</p></td>
+<td><p>issued_to_id</p></td>
+<td><p>VARCHAR(9)</p></td>
+<td><p>ID del dueño del vehículo</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>insurance_accepted</p></td>
+<td><p>BOOLEAN</p></td>
+<td><p>Hace referencia a sí el vehículo fue
+aceptado para ser asegurado</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabla-car-insurance-request">
+<h3>Tabla car_insurance_request<a class="headerlink" href="#tabla-car-insurance-request" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>columna</p></th>
+<th class="head"><p>Tipo de dato</p></th>
+<th class="head"><p>Descripcion</p></th>
+<th class="head"><p>NULL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PK</p></td>
+<td><p>request_id</p></td>
+<td><p>SERIAL</p></td>
+<td><p>ID de la solicitud de seguro para
+un vehículo</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>request_date</p></td>
+<td><p>DATE</p></td>
+<td><p>Fecha en la cual se realizó la
+solicitud del seguro</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td><p>FK</p></td>
+<td><p>vehicle_id</p></td>
+<td><p>VARCHAR(7)</p></td>
+<td><p>ID del vehículo para el cual se
+solicita el seguro</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td><p>FK</p></td>
+<td><p>customer_id</p></td>
+<td><p>VARCHAR(9)</p></td>
+<td><p>ID de la persona que ha solicitado
+el seguro de vehículo</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>request_comments</p></td>
+<td><p>TEXT</p></td>
+<td><p>Notas tomadas por el trabajador del
+banco que recibio la solicitud
+de seguro vehicular</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>request_state</p></td>
+<td><p>VARCHAR(10)</p></td>
+<td><p>Estado de la solicitud vehícular</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabla-workers">
+<h3>Tabla workers<a class="headerlink" href="#tabla-workers" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>columna</p></th>
+<th class="head"><p>Tipo de dato</p></th>
+<th class="head"><p>Descripcion</p></th>
+<th class="head"><p>NULL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td><p>worker_id</p></td>
+<td><p>SERIAL</p></td>
+<td><p>ID del trabajador del banco</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>worker_fullname</p></td>
+<td><p>VARCHAR(100)</p></td>
+<td><p>Nombre completo del trabajador
+del banco</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td><p>PK</p></td>
+<td><p>worker_username</p></td>
+<td><p>VARCHAR(20)</p></td>
+<td><p>Nombre de usuario del trabajador
+del banco</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>worker_email</p></td>
+<td><p>VARCHAR(30)</p></td>
+<td><p>Email del trabajador del banco</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>worker_password</p></td>
+<td><p>VARCHAR(30)</p></td>
+<td><p>Contraseña de la cuenta del
+trabajador del banco</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>worker_position</p></td>
+<td><p>VARCHAR(15)</p></td>
+<td><p>Cargo del trabajador del banco</p></td>
+<td><p>NOT NULL</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="instalador.html" class="btn btn-neutral float-left" title="Instalador(portable)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, BBBank developers team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
